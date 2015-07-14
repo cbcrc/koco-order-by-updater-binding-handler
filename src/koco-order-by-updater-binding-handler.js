@@ -10,6 +10,7 @@ define(['knockout', 'jquery', 'string-utilities'],
             orderByFunction: null,
             orderByArgumentName: 'orderBy',
             orderByDirectionArgumentName: 'orderByDirection',
+            defaultOrderByDirection: 'descending',
             enabled: true
         };
 
@@ -26,6 +27,12 @@ define(['knockout', 'jquery', 'string-utilities'],
 
                         return false;
                     });
+
+                    if (stringUtilities.equalsIgnoreCase(settings.defaultOrderByDirection, 'descending')) {
+                        $element.append('&nbsp;<i class="fa fa-caret-down"></i>');
+                    } else {
+                        $element.append('&nbsp;<i class="fa fa-caret-up"></i>');
+                    }
                 } else {
                     $element.removeAttr('href').changeElementType('span');
                 }
