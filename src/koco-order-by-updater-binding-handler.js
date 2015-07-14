@@ -27,12 +27,6 @@ define(['knockout', 'jquery', 'string-utilities'],
 
                         return false;
                     });
-
-                    if (stringUtilities.equalsIgnoreCase(settings.defaultOrderByDirection, 'descending')) {
-                        $element.append('&nbsp;<i class="fa fa-caret-down"></i>');
-                    } else {
-                        $element.append('&nbsp;<i class="fa fa-caret-up"></i>');
-                    }
                 } else {
                     $element.removeAttr('href').changeElementType('span');
                 }
@@ -46,14 +40,13 @@ define(['knockout', 'jquery', 'string-utilities'],
 
                 if (settings.enabled) {
                     $element.find('i').remove();
-                    $element.html($.trim($element.text()));
-
+                    
                     if (stringUtilities.equalsIgnoreCase(currentOrderBy, settings.argumentName)) {
                         //mettre la fleche
                         if (stringUtilities.equalsIgnoreCase(currentOrderByDirection, 'descending')) {
-                            $element.append('&nbsp;<i class="fa fa-caret-down"></i>');
+                            $element.append('<i class="fa fa-caret-down"></i>');
                         } else {
-                            $element.append('&nbsp;<i class="fa fa-caret-up"></i>');
+                            $element.append('<i class="fa fa-caret-up"></i>');
                         }
                     }
                 }
