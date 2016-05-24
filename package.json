@@ -1,0 +1,22 @@
+{
+    "name": "koco-order-by-updater-binding-handler",
+    "version": "0.1.3",
+    "homepage": "https://github.com/cbcrc/koco-order-by-updater-binding-handler",
+    "authors": [
+        "Mark Moyes <mark.moyes@cbc.ca>"
+    ],
+    "description": "koco-order-by-updater-binding-handler",
+    "main": "src/koco-order-by-updater-binding-handler.js",
+    "keywords": [
+        "koco",
+        "knockout",
+        "lists"
+    ],
+    "license": "MIT",
+    "scripts": {
+        "build": "rm -rf dist && mkdir dist && cp -r src/* dist && rm -rf dist/*.js && babel src --out-dir dist --modules umd --presets es2015,stage-0"
+    },
+    "dependencies": {
+        "koco-string-utilities": "^0.1.3"
+    }
+}
