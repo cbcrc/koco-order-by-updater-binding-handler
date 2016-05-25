@@ -17,6 +17,12 @@
     "build": "rm -rf dist && mkdir dist && cp -r src/* dist && rm -rf dist/*.js && babel src --out-dir dist --modules umd --presets es2015,stage-0"
   },
   "dependencies": {
-    "koco-string-utilities": "^0.1.3"
+    "koco": "^1.0.0",
+    "koco-string-utilities": "^1.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0"
   }
 }
