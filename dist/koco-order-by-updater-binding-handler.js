@@ -8,9 +8,9 @@ var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _stringUtilities = require('string-utilities');
+var _kocoStringUtilities = require('koco-string-utilities');
 
-var _stringUtilities2 = _interopRequireDefault(_stringUtilities);
+var _kocoStringUtilities2 = _interopRequireDefault(_kocoStringUtilities);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -52,9 +52,9 @@ _knockout2.default.bindingHandlers.orderByUpdater = {
         if (settings.enabled) {
             $element.find('i').remove();
 
-            if (_stringUtilities2.default.equalsIgnoreCase(currentOrderBy, settings.argumentName)) {
+            if (_kocoStringUtilities2.default.equalsIgnoreCase(currentOrderBy, settings.argumentName)) {
                 //mettre la fleche
-                if (_stringUtilities2.default.equalsIgnoreCase(currentOrderByDirection, 'descending')) {
+                if (_kocoStringUtilities2.default.equalsIgnoreCase(currentOrderByDirection, 'descending')) {
                     $element.append('<i class="fa fa-caret-down"></i>');
                 } else {
                     $element.append('<i class="fa fa-caret-up"></i>');
