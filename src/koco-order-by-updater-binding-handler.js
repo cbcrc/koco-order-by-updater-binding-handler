@@ -3,7 +3,7 @@
 
 import ko from 'knockout';
 import $ from 'jquery';
-import stringUtilities from 'string-utilities';
+import stringUtilities from 'koco-string-utilities';
 
 
 var defaultSettings = {
